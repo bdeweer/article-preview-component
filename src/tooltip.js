@@ -5,7 +5,7 @@ let tippyInstance = null;
 
 function initTippy() {
   if (isTablet.matches && !tippyInstance) {
-    tippyInstance[0] = tippy(".tooltip-container", {
+    tippyInstance = tippy(".tooltip-container", {
       placement: "top",
       allowHTML: true,
       interactive: true,
@@ -30,7 +30,7 @@ function initTippy() {
   </div>`,
     });
   } else if (!isTablet.matches && tippyInstance) {
-    tippyInstance.destroy();
+    tippyInstance[0].destroy();
     tippyInstance = null;
   }
 }
