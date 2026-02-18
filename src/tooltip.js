@@ -30,7 +30,7 @@ function initTippy() {
   </div>`,
     });
   } else if (!isTablet.matches && tippyInstance) {
-    tippyInstance[0].destroy();
+    tippyInstance.destroy();
     tippyInstance = null;
   }
 }
