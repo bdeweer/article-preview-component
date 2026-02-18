@@ -5,7 +5,7 @@ let tippyInstance = null;
 
 function initTippy() {
   if (isTablet.matches && !tippyInstance) {
-    tippyInstance = tippy(".tooltip-container", {
+    tippyInstance[0] = tippy(".tooltip-container", {
       placement: "top",
       allowHTML: true,
       interactive: true,
